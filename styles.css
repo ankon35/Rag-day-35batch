@@ -1,0 +1,283 @@
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    padding: 0;
+    margin: 0;
+}
+
+/* Navbar */
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #333;
+    padding: 10px 0;
+    z-index: 100;
+}
+
+.navbar ul {
+    list-style-type: none;
+    text-align: center;
+}
+
+.navbar ul li {
+    display: inline-block;
+    margin: 0 20px;
+}
+
+.navbar ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+/* Page 1 Layout */
+.page1-container {
+    padding-top: 100px; /* To avoid overlap with navbar */
+}
+
+/* Page 1 Layout */
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    width: 100%;
+    height: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.left-side, .right-side {
+    width: 50%;
+    text-align: center;
+    padding: 20px;
+}
+
+.left-side h1 {
+    font-size: 36px;
+    color: #333;
+}
+
+.left-side h2 {
+    font-size: 28px;
+    color: #333;
+}
+
+/* Typewriting Effect */
+.typewriter {
+    display: inline-block;
+    overflow: hidden;
+    white-space: nowrap;
+    border-right: 4px solid #333;
+    animation: typing 4s steps(10) 1s forwards, blink-caret 0.75s step-end infinite;
+}
+
+@keyframes typing {
+    from { width: 0; }
+    to { width: 100%; }
+}
+
+@keyframes blink-caret {
+    50% { border-color: transparent; }
+}
+
+/* Image */
+.event-image {
+    width: 80%;
+    max-width: 400px;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+
+.event-image:hover {
+    transform: scale(1.05);
+}
+
+/* Page 2 Layout */
+.page2-container {
+    padding-top: 100px; /* Add top padding to push Page 2 down */
+    min-height: 100vh; /* Ensure Page 2 has a minimum height */
+    margin-top: 100px; /* Space between Page 1 and Page 2 */
+}
+
+.page2-container .container {
+    display: flex;
+    justify-content: space-between; /* Ensure the image and text are aligned properly */
+    align-items: flex-start; /* Align items at the top */
+    /* flex-direction: row; */
+}
+
+.page2-container .left-side {
+    width: 50%;
+    padding: 20px;
+    visibility: visible; /* Left side visible */
+}
+
+.page2-container .right-side {
+    width: 50%;
+    padding: 20px;
+}
+
+/* Heading style for "About Us" */
+.page2-container h2 {
+    font-size: 36px; /* Heading font size */
+    color: #333;
+    text-align: center; /* Align the text to the left */
+    margin-bottom: 30px; /* Space below the heading */
+}
+
+/* Image Animation for Page 2 */
+#animated-image {
+    position: relative;
+    transition: transform 2s ease-out; /* Smooth and slow transition */
+}
+
+/* Event Text */
+.event-text {
+    font-size: 20px;
+    color: #333;
+    padding: 20px;
+    margin-top: 80px;
+}
+
+/* Media Queries */
+@media screen and (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .left-side h1, .left-side h2 {
+        font-size: 22px;
+        text-align: center;
+    }
+
+    .event-image {
+        width: 90%;
+        max-width: 350px;
+    }
+
+    .page2-container .container {
+        flex-direction: column;
+    }
+
+    .page2-container .right-side .event-image {
+        width: 90%;
+        max-width: 400px;
+    }
+}
+
+
+
+/* Page 3 - Image Gallery */
+.page3-container {
+    text-align: center;
+    padding: 80px 20px;
+}
+
+.page3-container h2 {
+    font-size: 36px;
+    color: #333;
+    margin-bottom: 40px;
+}
+
+/* Image Gallery */
+.image-gallery {
+    position: relative;
+    width: 300px;
+    height: 300px;
+    margin: 0 auto;
+}
+
+.gallery-item {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform-origin: center;
+    transition: transform 0.3s ease, z-index 0s;
+}
+
+.gallery-item img {
+    width: 120px;  /* Adjust the size of the images */
+    height: 80px;  /* Set the height to be rectangular */
+    object-fit: cover;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+/* Hover Effect */
+.gallery-item:hover img {
+    transform: translateY(-30%) scale(1.1); /* Hover effect makes the image rise and grow */
+    z-index: 10; /* Bring the hovered image to the front */
+}
+
+/* For Circular Formation */
+.gallery-item:nth-child(1) {
+    transform: rotate(0deg) translateX(150px) rotate(0deg);
+}
+
+.gallery-item:nth-child(2) {
+    transform: rotate(36deg) translateX(150px) rotate(-36deg);
+}
+
+.gallery-item:nth-child(3) {
+    transform: rotate(72deg) translateX(150px) rotate(-72deg);
+}
+
+.gallery-item:nth-child(4) {
+    transform: rotate(108deg) translateX(150px) rotate(-108deg);
+}
+
+.gallery-item:nth-child(5) {
+    transform: rotate(144deg) translateX(150px) rotate(-144deg);
+}
+
+.gallery-item:nth-child(6) {
+    transform: rotate(180deg) translateX(150px) rotate(-180deg);
+}
+
+.gallery-item:nth-child(7) {
+    transform: rotate(216deg) translateX(150px) rotate(-216deg);
+}
+
+.gallery-item:nth-child(8) {
+    transform: rotate(252deg) translateX(150px) rotate(-252deg);
+}
+
+.gallery-item:nth-child(9) {
+    transform: rotate(288deg) translateX(150px) rotate(-288deg);
+}
+
+.gallery-item:nth-child(10) {
+    transform: rotate(324deg) translateX(150px) rotate(-324deg);
+}
+
+/* Media Queries */
+@media screen and (max-width: 768px) {
+    .image-gallery {
+        width: 80%;
+        height: auto;
+        flex-direction: column;
+    }
+
+    .gallery-item {
+        position: relative;
+        transform: none;
+        margin-bottom: 20px;
+    }
+
+    .gallery-item img {
+        width: 100px;
+        height: 60px;  /* Adjust the image size for smaller screens */
+    }
+}
