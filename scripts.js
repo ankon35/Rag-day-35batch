@@ -11,14 +11,28 @@ window.addEventListener('scroll', function () {
     const page2Top = page2.offsetTop;
     const page2Height = page2.offsetHeight;
 
+    // Detect if the screen is mobile (or smaller width)
+    const isMobile = window.innerWidth <= 768;
+
     // Check if user has scrolled past Page 1 to Page 2
     if (scrollPosition >= page2Top - window.innerHeight + 200) {
         // Animate image from Page 1 to left side of Page 2
-        page1Image.style.transform = 'translateX(-40vw) translateY(106vh)'; // Slower movement
+        if (isMobile) {
+            // For mobile screens, apply a 90-degree rotation and adjust translation
+            page1Image.style.transform = 'translateX(0vw) translateY(106vh)'; // Adjust for mobile
+        } else {
+            // For desktop/tablet, apply normal transition
+            page1Image.style.transform = 'translateX(-40vw) translateY(106vh)';
+        }
         page2Image.style.transform = 'none'; // Reset position of image on Page 2
     } else {
         // Reverse the animation for scrolling back to Page 1
         page1Image.style.transform = 'none'; // Reset position of image on Page 1
-        page2Image.style.transform = 'translateX(70vw) translateY(-70vh)'; // Reset image back
+        if (isMobile) {
+            // For mobile, adjust translation to avoid overflow
+            page2Image.style.transform = 'translateX(0vw) translateY(106vh)'; // Adjust for mobile
+        } else {
+            page2Image.style.transform = 'translateX(70vw) translateY(-70vh)'; // Normal reset
+        }
     }
 });
