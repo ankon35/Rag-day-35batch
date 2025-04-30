@@ -116,7 +116,8 @@ body {
     max-width: 1200px;
     margin: 0 auto;
     padding: 20px;
-    margin-top: 50px;
+    /* margin-top: 50px; */
+    height: 100vh;
 }
 
 .left-side,
@@ -135,7 +136,7 @@ body {
 .left-side h2 {
     font-size: 30px;
     color: #333;
-    font-family: cursive;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
 /* Typewriting Effect */
@@ -144,9 +145,9 @@ body {
     overflow: hidden;
     white-space: nowrap;
     border-right: 4px solid #333;
-    width: 12ch;
+    width: 8ch;
     font-family: monospace;
-    animation: typing-reverse 5s steps(12) infinite, blink-caret 0.75s step-end infinite;
+    animation: typing-reverse 5s steps(8) infinite, blink-caret 0.75s step-end infinite;
 }
 
 @keyframes typing-reverse {
@@ -155,11 +156,11 @@ body {
     }
 
     40% {
-        width: 12ch;
+        width: 8ch;
     }
 
     60% {
-        width: 12ch;
+        width: 8ch;
     }
 
     100% {
@@ -190,7 +191,7 @@ body {
 /* Page 2 Layout */
 .page2-container {
     padding-top: 100px;
-    min-height: 100vh;
+    height: auto;
     margin-top: 100px;
 }
 
@@ -217,7 +218,7 @@ body {
     color: #333;
     text-align: center;
     margin-bottom: 30px;
-    font-family: cursive;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     font-weight: bolder;
 }
 
@@ -228,7 +229,7 @@ body {
     padding: 20px;
     margin-top: -39px;
     text-align: justify;
-    font-family: cursive;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     margin-left: 36px;
 }
 
@@ -244,7 +245,7 @@ body {
     font-size: 36px;
     color: #333;
     margin-bottom: 40px;
-    font-family: cursive;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     font-weight: bolder;
 }
 
@@ -382,7 +383,7 @@ body {
     text-align: center;
     padding: 20px 0;
     position: relative;
-    font-family: cursive;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     width: 100%;
     justify-content: center;
     align-items: center;
