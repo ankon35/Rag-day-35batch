@@ -22,7 +22,7 @@ window.addEventListener('scroll', function () {
             page1Image.style.transform = 'translateX(0vw) translateY(106vh)'; // Adjust for mobile
         } else {
             // For desktop/tablet, apply normal transition
-            page1Image.style.transform = 'translateX(-40vw) translateY(126vh)';
+            page1Image.style.transform = 'translateX(-40vw) translateY(110vh)';
         }
         page2Image.style.transform = 'none'; // Reset position of image on Page 2
     } else {
