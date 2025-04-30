@@ -193,7 +193,7 @@ body {
     padding-top: 100px;
     height: 60vh;
     margin-top: 100px;
-    background-color: white;
+    /* background-color: white; */
 }
 
 .page2-container .container {
@@ -232,6 +232,10 @@ body {
     text-align: justify;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     margin-left: 36px;
+    background: white;
+        border-radius: 15px;
+        box-shadow: 1;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
 }
 
 /* Page 3 - Image Gallery */
@@ -492,6 +496,13 @@ body {
 
 /* Media Queries for Mobile */
 @media screen and (max-width: 768px) {
+
+
+    *{
+        padding: 0;
+        margin: 0;
+    }
+
     .mentor-container {
         grid-template-columns: 1fr 1fr; /* 2 items per row on small screens */
     }
@@ -507,6 +518,15 @@ body {
     .mentor-role {
         font-size: 16px;
     }
+
+
+    .page2-container {
+        padding-top: 100px;
+        height: 100vh;
+        margin-top: 100px;
+        /* background-color: white; */
+    }
+
 
     .mentor-section {
         padding: 50px 20px;
@@ -674,8 +694,13 @@ body {
     }
 
     .event-text {
-    font-size: 22px;
+        font-size: 22px;
+        background: white;
+        border-radius: 15px;
+        box-shadow: 1;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
     }
+}
 
     .footer-content{
         margin-left: 56px;
